@@ -1,37 +1,82 @@
-## Welcome to GitHub Pages
+### Scope/Closure Questionnaire
 
-You can use the [editor on GitHub](https://github.com/kbujuklieva/TelerikAcademyQuestionnaires/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+-------
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#### Learning Objectives
 
-```markdown
-Syntax highlighted code block
+- Explain what functions are and why they are so important.
+- Write a function that accepts parameters and produces a result.
+- Name the three types of functions and explain their differences.
+- Demonstrate writing functions that are single-responsible.
+- Explain what exceptions are and how we handle them?
+- Handle an exception that is thrown inside a function.
 
-# Header 1
-## Header 2
-### Header 3
+#### Theoretical Questions 
 
-- Bulleted
-- List
+##### What is a function? What types of functions are there?
 
-1. Numbered
-2. List
+- A function in JavaScript is ...
 
-**Bold** and _Italic_ and `Code` text
+- functions help you split your program into small, repeatable blocks of code
 
-[Link](url) and ![Image](src)
-```
+- There are **3** types of functions in JavaScript based on the way they are declared ( + they also have slight differences in the way they can be used in programming):
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+  - **function declarations**
+  - **function expressions**
+  - **Fat arrow functions** (newest type)
 
-### Jekyll Themes
+- Example:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kbujuklieva/TelerikAcademyQuestionnaires/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+  ```javascript
+  
+  ```
 
-### Support or Contact
+##### What is the difference between function expression, fat arrows and function declaration?
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- **Function declaration**
+
+  ```javascript
+  
+  ```
+
+  
+
+- **Function expression**
+
+  ```javascript
+  
+  ```
+
+  
+
+- **Fat arrow functions** ( => )
+
+  ```javascript
+  
+  ```
+
+  
+
+#####  What is an immediately-invoked function expression (aka IIFE) ? Why use it?
+
+-  What is it?  **Immediately-invoked function expressions** are a sub-type of function expressions which are **called ONLY ONCE**, which happens **immediately after they are initialised** 
+
+- As with other function expressions, IIFEs can be assigned to a variable
+
+- **Usage:** IIFEs are used when you want to enclose certain variables in a function scope and you will not be using them anywhere else in the program
+
+- **Example:**
+
+  ```javascript
+  const isIIFE = (function(a){
+    console.log('This is an + a')
+  })('IIFE');
+  ```
+
+  
+
+
+###### Created by Kamelia Bujuklieva.
+###### July 2021, Sofia, Bulgaria
