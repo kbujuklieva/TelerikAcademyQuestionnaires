@@ -1,3 +1,4 @@
+
 ### Functions/Exceptions Questionnaire
 
 -------
@@ -17,51 +18,60 @@
 
 ##### What is a function? What types of functions are there?
 
-- A function in JavaScript is ...
+- functions are first-class citizens in JS, i.e. they are very crucial to the language; they are of type object
 
-- functions help you split your program into small, repeatable blocks of code
+- functions can be accepted as parameters to another function, can be assigned to variables, can be returned from a function, and can also have properties and methods of their own
+
+- functions are procedures that perform a certain task (analogically to verbs in a sentence); they help make your code more reusable and broken down into smaller pieces
+
+- functions help you split your program into small, repeatable blocks of code; functions usually take one or more parameters and return some data; functions need to first be defined and then called, so that they can be executed in the program
+
+- when **defining** a function, you have **parameters**, while when **calling** a function, you have **arguments**
+
+- functions in JS can have **default parameters**, which are used as arguments if no argument or 'undefined' is passed
+
+- function in JS can use the **rest operator (...)** as a parameter thanks to which we may pass **an indefinite number of arguments,** which will come as an **array**
+
+- Functions **must always return something**; if it is not *explicitly* specified, they return **undefined**
 
 - There are **3** types of functions in JavaScript based on the way they are declared ( + they also have slight differences in the way they can be used in programming):
 
   - **function declarations**
-  - **function expressions**
-  - **Fat arrow functions** (newest type)
+  - **function expressions** - they are assigned to a variable; 
+  - **Fat arrow functions** (newest type sinece ES2015/ ES6)
 
 - Example:
 
   ```javascript
-  
+  //function declaration
+  function firstLetter (name) {
+    return name[0]
+  }
+  //function expression 
+  const nameLowerCase = function (name) {
+    return name.toLowerCase();
+  };
+  //fat arrow function
+  const nameCaps = (name) => name.toUpperCase();
   ```
 
 ##### What is the difference between function expression, fat arrows and function declaration?
 
 - **Function declaration**
-
-  ```javascript
-  
-  ```
-
-  
+  - function keyword, function name, input parameters (optional), function body, return value;
 
 - **Function expression**
-
-  ```javascript
-  
-  ```
-
-  
+  - again has the function keyword but instead of a name, it is assigned to a variable
 
 - **Fat arrow functions** ( => )
 
-  ```javascript
-  
-  ```
-
-  
+  - No ***function keyword***, again assigned to a variable
+  - no ***arguments*** object
+  - no ***this*** context
 
 #####  What is an immediately-invoked function expression (aka IIFE) ? Why use it?
 
--  What is it?  **Immediately-invoked function expressions** are a sub-type of function expressions which are **called ONLY ONCE**, which happens **immediately after they are initialised** 
+- What is it?  **Immediately-invoked function expressions** are a sub-type of function expressions which are **called ONLY ONCE**, which happens **immediately after they are initialised** 
 
 - As with other function expressions, IIFEs can be assigned to a variable
 
@@ -76,90 +86,7 @@
   ```
 
   
-### Scope/Closure Questionnaire
 
--------
-
-
-
-#### Learning Objectives
-
-- Explain what is scope and what defines it.
-
-- Demonstrate the difference between var and let.
-
-- Explain what hoisting is, what is hoisted and what not.
-
-- Demonstrate how each of the three function type is hoisted.
-
-- Explain what is closure and how it's connected to scopes.
-
-- Demonstrate how to provide access to a variable's value outside the function it is defined in.
-
-- In a given piece of code, determine if closure exists and identify it.
-
-  
-
-#### Theoretical Questions 
-
-##### What is scope? Provide an example.
-
-- 
-
-- **Example:**
-
-  ```javascript
-  
-  ```
-
-##### What is the difference between const, let and var?
-
-- these are all different ways to declare  a variable (in JS there is no str, string, num, double, char, float, etc.)
-- var is **NOT RECOMMENDED**
-- since ES6, **let** and **const** are used with all different variable types
-- **const** is used for variables which will not be changed in the program, i.e. you cannot reassign it while you may do so with **let** (even though it is not good practice)
-- difference in their **scope**: 
-  - **var** has **function scope**, i.e. it is visible across the whole function, in which it is defined
-  - **let** and **const** have **block scope**, i.e. in between curly braces {} and they are not visible outside it
-
-- difference in **hoisting**:
-  - All variables are **hoisted** in JS because unlike common opinion, JS is "scanned", i.e. it has **just-in-time compilation**
-  - however, var- declared variables appear as **undefined** and let and const **throw an error** as the variables are in **TEMPORAL DEAD ZONE** **(TDZ)**
-
-#####  What is the difference between == and ===, and what is type coercion?
-
-- **===**  is referred to as **"strict equal"**, i.e. it compares both the **value** and **type** of both sides
-- **==** compares **only the values** 
-- they both return a **boolean**, i.e. true/false
-- **type coercion** refers to 
-
-##### What is variable and function hoisting?
-
-- **hoisting** refers to the idea that
-- 
-
-##### What is hoisted and what is not?
-
-- **everything** is hoisted in theory in JS
-- 
-- 
-
-##### What is lexical scope? What is lexing-time?
-
-- **lexical scope** refers to the scope that is physically around a variable
-- **lexing-time**
-
-##### What is closure? Provide an example.
-
-- **closure** refers to the idea 
-
-- ***Example:***
-
-  ```javascript
-  
-  ```
-
-  
 
 
 
